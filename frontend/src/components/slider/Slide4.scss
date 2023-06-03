@@ -1,0 +1,40 @@
+@keyframes slide4-slide-down {
+    0%{
+        top: 0%;
+    }
+    100%{
+        top:20%;
+        opacity:1;
+    }
+}
+.slide4 .img1{
+    position:absolute;
+    z-index:1;
+    top:12%;
+    left:15%;
+    width:70%;
+    height:70%;
+    object-fit:contain;
+    opacity: 0;
+    animation: fade-in 3s ease 2s;
+    animation-fill-mode: forwards;
+}
+.slide4 .img2{
+    position:absolute;
+    z-index:1;
+    top:30%;
+    left:0%;
+    object-fit: contain;
+    width:50%;
+    height:50%;
+    opacity: 0;
+    animation: slide-up 3s ease 1s;
+    animation-fill-mode: forwards;
+}
+.slide4 .content{
+    top:30%;
+    left:50%;
+    width:30%;
+    animation:slide4-slide-down 3s ease 4s;
+    animation-fill-mode: forwards;
+}

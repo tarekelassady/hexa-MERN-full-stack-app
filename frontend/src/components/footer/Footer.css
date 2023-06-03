@@ -1,0 +1,84 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    padding:5rem 0rem 0rem 0rem;
+}
+.footer_cityimg{
+    /* padding:3rem;
+    background-image: url("../../assets/footer-city-violet-mauve.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-position-x: center;
+    width:100%; */
+}
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    background: var(--light-first-color);
+    width:100%;
+    background-image: url("../../assets/footerhexagongre.png");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat:repeat-x;
+    background-size:25%;
+}
+.footer_content-info{
+    display: flex;
+    /* flex-wrap: wrap; wrap on smaller screens */
+    /* justify-content: center;
+    align-items: center; */
+    width:100%;
+    padding:2rem 2rem 6rem;
+    /* flex:1; */
+}
+.footer_content-info div{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    
+}
+.footer_content-info_contacts{
+    display:flex;
+    flex-direction: row!important;
+
+}
+.footer_content-info_contacts div, .footer_content-info_usefullinks p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+    padding:1rem 0rem;
+    color:var(--main-border-color);
+    font-size:18px;
+}
+.footer_content-info_contacts h4{
+    margin-left:1rem;
+}
+.footer_content-copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background:rgba(255,255,255,0.3);
+}
+.footer_content-copyright h1{
+    font-family: var(--font-family);
+    font-size:20px;
+    color:var(--first-color);
+}
+.footer_content-copyright span{
+    color:var(--formInputs-color);
+}
+
+@media screen and(max-width:490px) {
+    .footer_content{
+        background-size:60%;
+    }
+}

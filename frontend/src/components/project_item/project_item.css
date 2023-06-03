@@ -1,0 +1,21 @@
+.project_item{
+    display:flex;
+    padding:10px;
+    align-items:center;
+    justify-content: left;
+    gap:50px;
+    background-color: white;
+    margin:10px;
+    border: 1px solid var(--main-border-color);
+}
+.project_item img{
+    max-width: 300px;
+}
+.project_item .script{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    padding:20px;
+
+}
