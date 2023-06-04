@@ -9,13 +9,13 @@ export const AuthContextProvider=({children})=>{
     const [getIsError,setIsError]=useState("");
     
     const login=async(inputs)=>{
-        const res = await axios.post("http://localhost:4000/users/login",inputs);
+        const res = await axios.post("/users/login",inputs);
         setCurrentUser(res.data);
     }
 
     const logout=async()=>{
         // setIsLoading(true);
-        await axios.post("http://localhost:4000/users/logout");
+        await axios.post("/users/logout");
         setCurrentUser(null);
     }
 
