@@ -52,7 +52,7 @@
     color:var(--light-second-color);
     font-family:var(--font-family);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 25px;
     text-transform: uppercase;
     margin:0rem 1rem;
@@ -79,7 +79,6 @@
 
 .hexa_navbar-menu{
     margin-left: 1rem;
-    display: none;
     position: relative;
     z-index: 1;
 }
@@ -142,6 +141,11 @@
     .hexa_navbar-menu_container-links_sign{
         display:block;
     }
+    .hexa_navbar-menu_container-links_sign p{
+        color:var(--second-color);
+
+    }
+    
     .hexa_navbar-links_logo img{
         width:100px;
     }

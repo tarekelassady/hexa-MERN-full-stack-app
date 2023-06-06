@@ -1,0 +1,40 @@
+.create_project_form{
+    background-color: white;
+    padding:2rem 2rem;
+}
+
+.create_project_form form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+}
+.create_project_form input{
+    padding:10px;
+    border:1px solid var(--main-border-color);
+    border-radius: 2px;
+}
+.load_img{
+    display: flex;
+    flex-direction: column;
+}
+.categories{
+    margin:2px 0px;
+    padding:10px;
+}
+.action_buttons{
+    flex:2;
+    display:flex;
+    flex-direction: row;
+    gap:5px;
+}
+.create_project_form button{
+    padding:10px;
+    background-color: var(--first-color);
+    color:white;
+    border:none;
+    cursor:pointer;
+    &:hover{
+        background-color: var(--light-first-color);
+    }
+}

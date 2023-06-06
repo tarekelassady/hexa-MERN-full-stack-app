@@ -1,0 +1,13 @@
+.single_project{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    padding:20px 2vw;
+}
+
+.action_button{
+    /* border:none */
+}
+.delete_button{
+    border-color:var(--error-color);
+}

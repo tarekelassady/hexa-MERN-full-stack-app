@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
 
 const Home = () => {
-  /*comment 4/6/2023*/
+  
   return (
     <div className="App gradient_bg">
         <div className="App gradient_bg">

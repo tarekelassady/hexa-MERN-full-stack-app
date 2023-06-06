@@ -23,11 +23,8 @@ const Footer = () => {
               <h4>support@hexaproweb.com</h4>
             </div>
           </div>
-          {/* <div className='footer_content-info_usefullinks'>
-            <p className='footer_content-info_usefullinks-about'>About</p>
-            <p className='footer_content-info_usefullinks-contact'>Contact</p>
-          </div> */}
         </div>
+        
         <div className='footer_content-copyright'>
           <h1>© Hexa Web Solutions 2020 All Rights Reserved. Designed and developed by <span className='footer_content-copyright_hexa'>Hexa</span></h1>
         </div>

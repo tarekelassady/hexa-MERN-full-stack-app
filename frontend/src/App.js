@@ -1,11 +1,11 @@
 import{RouterProvider,Outlet, createBrowserRouter} from "react-router-dom";
-import WriteProject from "./pages/write_project";
+import WriteProject from "./pages/write_project/Write_Project";
 import Error404 from "./pages/error404";
 import Home from "./pages/home";
-import Login from "./pages/login";
-import Projects from "./pages/projects";
-import Register from "./pages/register";
-import SingleProject from "./pages/single_project";
+import Login from "./pages/auth/Login";
+import Projects from "./pages/projects/Projects";
+import Register from "./pages/auth/Register";
+import SingleProject from "./pages/single_project/Single_Project";
 import {NavBar,Footer} from "./components";
 import "./App.css";
 

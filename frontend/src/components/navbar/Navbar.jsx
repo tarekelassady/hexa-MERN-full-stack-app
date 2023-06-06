@@ -14,7 +14,6 @@ const Navbar = () => {
   }
 
   const {getCurrentUser,logout}=useContext(AuthContext);
-  console.log(getCurrentUser);
   const handleLogout=async(e)=>{
     e.preventDefault();
     try{
@@ -32,10 +31,9 @@ const Navbar = () => {
         <div className='hexa_navbar-links_logo'>
         <Link to="/"><img src={HexaLogo} alt="hexa logo" /></Link>
         </div>
-        <div className='hexa_navbar-links_container'>
+        {/* <div className='hexa_navbar-links_container'>
           <Menu linkClassName={menuLinkClassName.name}/>
-        </div>
-       
+        </div> */}
       </div>
       <div className='hexa_navbar-sign'>
         {getCurrentUser?(
@@ -45,40 +43,39 @@ const Navbar = () => {
           </>
         ):(
           <>
-            <p className={menuLinkClassName.name} ><Link to="/login">Sign In</Link></p>
+            <p className={menuLinkClassName.name} ><Link to={`/login?page=${parent}`}>Sign In</Link></p>
             <button type="button"><Link to="/register">Sign Up</Link></button>
           </>
         )}
-        
       </div>
 
 
       <div className="hexa_navbar-menu" onClick={()=>setToggleMenu(!toggleMenu)}>
-      {toggleMenu ?
-      <>
-      <RiCloseLine color="#fff" size={27} onClick={()=>setToggleMenu(false)} />
-      <div className="hexa_navbar-menu_container scale-up-center">
-          <div className="hexa_navbar-menu_container-links">
-            <Menu />
-            <div className='hexa_navbar-menu_container-links_sign'>
-            {getCurrentUser?(
-              <>
-                <p>{getCurrentUser.username}</p>
-                <p className={menuLinkClassName.name} onClick={logout}>Logout</p>
-              </>
-            ):(
-              <>
-                <p className={menuLinkClassName.name} ><Link to="/login">Sign In</Link></p>
-                <button type="button"><Link to="/register">Sign Up</Link></button>
-              </>
-            )}
+        {toggleMenu ?
+        <>
+          <RiCloseLine color="#fff" size={27} onClick={()=>setToggleMenu(false)} />
+          <div className="hexa_navbar-menu_container scale-up-center">
+            <div className="hexa_navbar-menu_container-links">
+              <Menu />
+              <div className='hexa_navbar-menu_container-links_sign'>
+              {getCurrentUser?(
+                <>
+                  <p>{getCurrentUser.username}</p>
+                  <p className={menuLinkClassName.name} onClick={logout}>Logout</p>
+                </>
+              ):(
+                <>
+                  <Link to={`/login?page=${parent}`}><p className={menuLinkClassName.name} >Sign In</p></Link>
+                  <button type="button"><Link to="/register">Sign Up</Link></button>
+                </>
+              )}
+              </div>
+            
+            </div>
           </div>
-           
-          </div>
-        </div>
-      </>
-      :
-      <RiMenu3Line color="#fff" size={27} onClick={()=>setToggleMenu(true)}/>}
+        </>
+        :
+        <RiMenu3Line color="#fff" size={27} onClick={()=>setToggleMenu(true)}/>}
       </div>
       
       

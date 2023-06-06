@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
-import "./pages.css";
+import "./auth.css";
+
 import axios from "axios";
 const Register = () => {
   const [getCredentials,setCredentials]=useState({
@@ -13,7 +14,6 @@ const Register = () => {
   
   const handleChange=(e)=>{
     setCredentials(prev=>({...prev,[e.target.id]:e.target.value}));
-    console.log(getCredentials);
   }
 
   const handleClick=async(e)=>{
@@ -30,24 +30,20 @@ const Register = () => {
     <div className="user_form">
       <form action="">
         <div className="user_form_input">
-          <label htmlFor="username">Username </label>
-          <input type="text" id="username" value={getCredentials.username} onChange={handleChange}/>
+          <input type="text" id="username" placeholder="Username" value={getCredentials.username} onChange={handleChange}/>
+          <input type="email" id="email" placeholder="Email" value={getCredentials.email} onChange={handleChange}/>
+          <input type="password" id="password" placeholder="Password" value={getCredentials.password} onChange={handleChange} />
         </div>
-        <div className="user_form_input">
-          <label htmlFor="email">Email </label>
-          <input type="email" id="email" value={getCredentials.email} onChange={handleChange}/>
-        </div>
-        <div className="user_form_input">
-          <label htmlFor="password">Password </label>
-          <input type="password" id="password" value={getCredentials.password} onChange={handleChange} />
-        </div>
+
         <div className="user_form_action_buttons">
-          <button onClick={handleClick}>Register</button>
+          <button onClick={handleClick} disabled={!getCredentials.username||
+          !getCredentials.email||!getCredentials.password}>Register</button>
           <button onClick={()=>navigate("/")}>Cancel</button>
         </div>
-        
+
+        <p className={getRegMessage==="User has been registered successfully"?"":"error_message"}>{getRegMessage}</p>
       </form>
-      <p className={getRegMessage==="User has been registered successfully"?"":"error_message"}>{getRegMessage}</p>
+      
       
     </div>
   )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'
-import './pages.css'
+import './write_project.css'
 import { useLocation } from 'react-router-dom';
 import axios from "axios";
 

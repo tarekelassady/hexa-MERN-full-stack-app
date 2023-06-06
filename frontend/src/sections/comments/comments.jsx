@@ -23,7 +23,7 @@ const Comments = ({projectId}) => {
     const handleAddComment=async(e)=>{
       e.preventDefault();
       try{
-        const res=await axios.post(`http://localhost:4000/comments/${projectId}`,{
+        await axios.post(`http://localhost:4000/comments/${projectId}`,{
           userId:getCurrentUser._id,
           comment:getText
         })
