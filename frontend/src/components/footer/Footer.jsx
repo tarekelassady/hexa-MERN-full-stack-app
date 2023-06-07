@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer.css"
-import footerParallaxImg from "../../assets/footerhexagongre.png"
+import footerParallaxImg from "../../assets/footerhexagongrey.png"
 import {RiMapPin2Fill,RiPhoneFill,RiMailFill} from "react-icons/ri"
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className='footer_content-copyright'>
           <h1>© Hexa Web Solutions 2020 All Rights Reserved. Designed and developed by <span className='footer_content-copyright_hexa'>Hexa</span></h1>
         </div>

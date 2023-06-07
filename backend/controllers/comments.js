@@ -26,7 +26,7 @@ router.post("/:projectId", async(req,res,next)=>{
     }
 })
 //Update Comment
-router.put("/:id",verifyUser,async(req,res,next)=>{
+router.put("/:id",async(req,res,next)=>{
     try{
         const updateComment=await Comment.findByIdAndUpdate(req.params.id,
             {$set:req.body},

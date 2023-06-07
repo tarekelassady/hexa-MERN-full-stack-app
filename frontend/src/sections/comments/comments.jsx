@@ -9,6 +9,7 @@ const Comments = ({projectId}) => {
     const [getText,setText]=useState("");
     const [getComments,setcomments]=useState([]);
     const {getCurrentUser}=useContext(AuthContext);
+    const [getEditId, setEditId]=useState();
     
     
     useEffect(()=>{
@@ -33,8 +34,12 @@ const Comments = ({projectId}) => {
     }
 
     const handleUpdate=async(commentId)=>{
+      console.log(commentId);
       try{
-        await axios.put(`http://localhost:4000/comments/${projectId}`);
+        await axios.put(`http://localhost:4000/comments/${commentId}`,{
+          comment:getText
+        });
+        setEditId(null);
       }catch(err){
         console.log(err);
       }
@@ -52,7 +57,7 @@ const Comments = ({projectId}) => {
         <form className='comment_form' action="">
         {getCurrentUser?
         <>
-          <input type="text" name="comment" id="comment" value={getText} onChange={e=>setText(e.target.value)} />
+          <input type="text" name="comment" id="comment" onChange={e=>setText(e.target.value)} />
           <button onClick={handleAddComment} disabled={!getText}>Add Comment</button>
         </>
         :
@@ -64,11 +69,20 @@ const Comments = ({projectId}) => {
           <div className='prev_comments' key={comment._id}>
             {/* <h3>{comment.userId._id}</h3> */}
             <h3>{comment.userId.username}</h3>
-            <input type="text" placeholder={comment.comment} value={getText} onChange={e=>setText(e.target.value)} />
+            <p>{comment.comment}</p>
+            {getEditId===comment._id&&
+            <>
+              <input type="text" onChange={e=>setText(e.target.value)} />
+              <div>
+                <button onClick={()=>handleUpdate(comment._id)}>Save</button>
+                <button onClick={()=>setEditId(null)}>Cancel</button>
+              </div>
+            </>
+            }
             <div className='action_buttons'>
             {(getCurrentUser&&getCurrentUser._id===comment.userId._id)&&
             <>
-              <button className="update_button" onClick={handleUpdate}>Edit Comment</button>
+              <button className="update_button" onClick={()=>setEditId(comment._id)}>Edit Comment</button>
               <button className='delete_button' onClick={e=>handleDelete(comment._id)}>Delete Comment</button>
             </>
             }
