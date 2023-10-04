@@ -1,0 +1,59 @@
+.slider{
+    width:100%;
+    height:90vh;
+    position:relative;
+    overflow: hidden; /*specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.*/
+    border: 5px solid white;
+}
+
+.slide,.current{
+    margin: 0 2rem;
+    border: 5px solid var(--color-blog);
+}
+.slide{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    opacity:0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+.current{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide1 h2{
+    color:rgb(255, 102, 0);
+}
+.slide2 h2{
+    color:yellow;
+}
+.slide3 h2{
+    color: violet;
+}
+.slide img,.current img{
+    height: 100vh;
+    width:90%;
+    object-fit: cover;
+}
+.content p{
+    background: rgba(255,255,255,0.05);
+    color:white;
+    margin: 2rem 2rem 0rem 2rem;
+    padding: 1rem;
+}
+.content hr{
+    width: 50%;
+    margin: 0rem 2rem;
+}
+.content button{
+    outline: none;
+    border-radius: 5px;
+    border:none;
+    margin: 1rem 2rem;
+    padding:0.5rem 1rem;
+}
+

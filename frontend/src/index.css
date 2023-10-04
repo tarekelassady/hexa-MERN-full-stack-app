@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('//db.onlinewebfonts.com/c/f50681b2730b665c01d2b860728aeba7?family=BunkenTechSansW01-Bold');
+
+:root {
+  --font-family: 'Poppins', 'Manrope', sans-serif;
+
+  /* --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --first-color:#2A0C41;
+  --second-color: #ff8420;
+  --h2-color:#A37DD1;
+  --text-color: #7F8190;
+  --formInputs-color:#402655;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, var(--second-color) 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, var(--second-color) 99.55%); */
+  
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --first-color:#363636;
+  --dark-first-color:#080808;
+  --light-first-color:#494949;
+  --second-color: #22afcc;
+  --light-second-color:#accdd8;
+  --dark-second-color:#003f53;
+  --text-color: #7F8190;
+  --main-border-color:#d3d3d3;
+  --error-color:#DA3445;
+
+  --gradient-text: linear-gradient(89.97deg, #ffffff 1.84%, var(--second-color) 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #ffffff -13.86%, var(--second-color) 99.55%);
+  
+}

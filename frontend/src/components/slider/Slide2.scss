@@ -1,0 +1,9 @@
+.slide2 .content button{
+    background: rgb(231, 197, 0);
+    opacity:0;
+    animation: slide-up 3s ease 3s;
+    animation-fill-mode: forwards;
+}
+.slide2 .content h2{
+    color: rgb(231, 197, 0);
+}

@@ -1,0 +1,104 @@
+.search_item{
+    height:40px;
+}
+@media screen and (min-width: 651px){
+    .projects_search_section{
+        display:flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--first-color);
+        height:60px;
+        /* position:sticky;
+        top:0px; */
+    }
+    .projects_search_inputs{
+        display: flex;
+        position: absolute;
+        height:60px;
+        top:30px; /*.projects_search_section height -(.projects_search_inputs/2)*/
+        flex-direction: row;
+        gap:20px;
+        align-items: center;
+        background: white;
+        border:2px solid #bebebe;
+        justify-content: space-around;
+    }
+    .projects_search_inputs *{
+        display:flex;
+        align-items: center;
+        height:40px;
+        padding:5px 10px;
+    }
+    .projects_search_inputs input, select{
+        border:1px solid #bebebe;
+        font-size: 14px;
+        color:var(--light-first-color);
+        cursor: pointer;
+    } 
+    .projects_search_inputs label{
+        color:var(--light-first-color);
+        font-size: 14px;
+    }
+    .projects_content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:50px 10px 10px;
+        background:#f0f0f0;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .projects_search_section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--first-color);
+        padding:10px;
+    }
+    .projects_search_inputs{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        align-items: left;
+        background: white;
+        border:2px solid #bebebe;
+    }
+    .projects_search_inputs select, #project_title{
+        display:flex;
+        align-items: center;
+        justify-content: start;
+        height:40px;
+        padding:5px 10px;
+        width:100%;
+        border:1px solid #bebebe;
+        font-size: 14px;
+        color:var(--light-first-color);
+        cursor: pointer;
+        
+    }
+    .input_featured{
+        display:flex;
+        align-items: center;
+        font-size: 14px;
+        color:var(--light-first-color);
+        justify-content: start;
+        gap:10px;
+        padding:0px 10px;
+        border:1px solid #bebebe;
+        
+    } 
+    .projects_content{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:50px 10px;
+        background:#f0f0f0;
+
+    }
+
+    
+}

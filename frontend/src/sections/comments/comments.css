@@ -1,0 +1,19 @@
+
+.comments{
+    display:flex;
+    flex-direction: column;
+}
+.comment_form{
+    gap:5px;
+}
+.prev_comments{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    padding:20px;
+    background-color: rgb(235, 235, 235);
+}
+
+.action_buttons{
+    gap:5px;
+}
