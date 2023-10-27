@@ -1,6 +1,7 @@
 # HEXA: Build A HEXA Website Backend
 
 This is a frontend build in React & Nodejs for a website for web solutions agency (HEXA).
+Test the app here https://hexa-jvc1.onrender.com/projects
 
 # Getting Started with Create React App
 
