@@ -13,6 +13,7 @@ export const AuthContextProvider=({children})=>{
     const login=async(inputs)=>{
         const res = await axios.post(`${backendURL}/users/login`,inputs);
         const {isAdmin,password,...otherDetails}=res.data;
+        localStorage.setItem("user",JSON.stringify(res.data));
         setCurrentUser({...otherDetails});
         setIsAdmin(isAdmin);
     }

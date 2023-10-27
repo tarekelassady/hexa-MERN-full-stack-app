@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const ProjectItem = ({project}) => {
   const backendURL=process.env.REACT_APP_BACKEND_URL;
   const {getCurrentUser,getIsAdmin}=useContext(AuthContext);
+
   return (
     <>
     <div className='project_item'>

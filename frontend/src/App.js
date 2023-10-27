@@ -1,4 +1,4 @@
-import{RouterProvider,Outlet, createBrowserRouter} from "react-router-dom";
+import{RouterProvider,Outlet, createBrowserRouter,Navigate} from "react-router-dom";
 import WriteProject from "./pages/write_project/Write_Project";
 // import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
@@ -8,7 +8,12 @@ import Register from "./pages/auth/Register";
 import SingleProject from "./pages/single_project/Single_Project";
 import {NavBar,Footer} from "./components";
 import "./App.css";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
+const App=()=>{ 
+
+const {getCurrentUser}=useContext(AuthContext);
 const Layout=()=>{
     
     return(
@@ -40,11 +45,11 @@ const router=createBrowserRouter([
             },
             {
                 path:"/register",
-                element:<Register/>
+                element:getCurrentUser?<Navigate to="/" replace />:<Register/>
             },
             {
                 path:"/login",
-                element:<Login/>
+                element:getCurrentUser?<Navigate to="/" replace />:<Login/>
             },
             
         ]
@@ -59,7 +64,6 @@ const router=createBrowserRouter([
     // }
     
 ])
-const App=()=>{ 
 
     return(
         <div className="App">
